@@ -113,7 +113,7 @@ namespace Submarine {
 					typeof(string), username,
 					typeof(string), password, 
 					typeof(string), "",
-					typeof(string), "OS Test User Agent");
+					typeof(string), "OSTestUserAgent");
 
 			if(XMLRPC.call(this.session, message, out vh) && (string)(vh.lookup("status")) == "200 OK") {
 				this.session_token = (string)(vh.lookup("token"));
