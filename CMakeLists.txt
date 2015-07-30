@@ -9,6 +9,12 @@ enable_testing ()
 option(ICON_UPDATE "Update the icon cache after installing" ON)
 option(BUILD_VALADOC "Build API documentation if Valadoc is available" OFF)
 
+include(GNUInstallDirs)
+if( ( ${CMAKE_INSTALL_PREFIX} MATCHES "^/usr/local" ) )
+	# A workaround to ensure that works 'out of the box' in Debian-based systems
+	set(CMAKE_INSTALL_LIBDIR lib)
+endif()
+
 set(HAVE_VALADOC OFF)
 if(BUILD_VALADOC)
 	find_package(Valadoc)
@@ -22,6 +28,7 @@ endif()
 
 find_package(PkgConfig)
 
+set(MODULES_TO_CHECK ${MODULES_TO_CHECK} gdk-pixbuf-2.0)
 set(MODULES_TO_CHECK ${MODULES_TO_CHECK} gee-0.8)
 set(MODULES_TO_CHECK ${MODULES_TO_CHECK} gio-2.0)
 set(MODULES_TO_CHECK ${MODULES_TO_CHECK} glib-2.0)
@@ -37,3 +44,4 @@ add_subdirectory(doc)
 add_subdirectory(po)
 add_subdirectory(src/lib)
 add_subdirectory(src)
+

@@ -1,5 +1,6 @@
 using GLib;
 using Gee;
+using Notify;
 // using GIO
 
 // project version = 0.1.5
@@ -182,6 +183,7 @@ private class SubmarineConsole : Object {
 			languages.add("en");
 			Report.warning("No language(s) selected, using ['eng', 'en'] languages.", true, Report.Verbosity.ALL);
 		}
+		Notify.init ("Submarine");
 	}
 	
 	private static string? subtitle_save(string filename, Submarine.Subtitle subtitle, bool force = false) {
@@ -218,7 +220,10 @@ private class SubmarineConsole : Object {
 	
 	private static int main(string[] args) {
 		init(ref args);
-		
+		Notify.Notification success = new Notify.Notification ("Download successful", "Found subtitle", "dialog-information");
+		Notify.Notification fails = new Notify.Notification ("Download Failed", "Connection to servers failed", "dialog-warning");
+		Notify.Notification faild = new Notify.Notification ("Download Failed", "Unable to find subtitle or save", "dialog-warning");
+
 		session = new Submarine.Session();
 		
 		//Connect to server(s)
@@ -312,6 +317,7 @@ private class SubmarineConsole : Object {
 					} else {
 						Report.message("  (Replaced) %s".printf(subtitles_saved_map[filename]));
 					}
+					success.show ();
 				} else if(subtitles_save_map.has_key(filename)) {
 					//  Could not save subtitle
 					var sub_filename = subtitles_download_map[filename].get_filename(filename);
@@ -338,9 +344,11 @@ private class SubmarineConsole : Object {
 			}
 			
 			if(error) {
+				faild.show ();
 				return ExitValue.PROGRAM_ERROR;
 			}
 		} else {
+			fails.show ();
 			Report.message("Summary:");
 			Report.message("  Could not connect to any Server!");
 			return ExitValue.PROGRAM_ERROR;
