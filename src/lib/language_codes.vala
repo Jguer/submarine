@@ -435,6 +435,7 @@ namespace Submarine {
 		{"phi",	null,	null,	"Philippine languages"},
 		{"phn",	null,	null,	"Phoenician"},
 		{"pli",	null,	"pi",	"Pali"},
+		{"pob",	null,	null,	"Brazilian portuguese"},
 		{"pol",	null,	"pl",	"Polish"},
 		{"pon",	null,	null,	"Pohnpeian"},
 		{"por",	null,	"pt",	"Portuguese"},
