@@ -1,4 +1,0 @@
-/home/jguer/ownCloud/Projects/Vala/Submarine/submarine/build_dir/src/lib/CMakeFiles/Submarine.dir
-/home/jguer/ownCloud/Projects/Vala/Submarine/submarine/build_dir/po/CMakeFiles/i18n.dir
-/home/jguer/ownCloud/Projects/Vala/Submarine/submarine/build_dir/po/CMakeFiles/pot.dir
-/home/jguer/ownCloud/Projects/Vala/Submarine/submarine/build_dir/src/CMakeFiles/submarine.dir
