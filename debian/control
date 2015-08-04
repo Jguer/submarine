@@ -1,0 +1,12 @@
+Source: submarine
+Maintainer: John Guerreiro <joaogg3@gmail.com>
+Priority: optional
+Section: misc
+Build-Depends: build-essential, po-debconf, valac-0.28, libgdk-pixbuf2.0-dev, libgee-0.8-dev, libglib2.0-dev, libnotify-dev, libc6-dev, libarchive-dev, libsoup2.4-dev, libxml2-dev, cmake, gettext, pkg-config, gcc, g++, make, intltool
+
+Package: submarine
+Architecture: any
+Version: 0.1.6
+Depends: libgdk-pixbuf2.0-0, libglib2.0-0, libgee-0.8-2, libnotify4, libarchive13, libsoup2.4-1, libxml2
+Description: Subtitle fetcher from different sources
+ .

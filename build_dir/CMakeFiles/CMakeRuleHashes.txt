@@ -1,0 +1,7 @@
+# Hashes of file build rules.
+95902074c44a253a82dfa6e3e574e08f po/CMakeFiles/i18n
+95902074c44a253a82dfa6e3e574e08f po/CMakeFiles/pot
+930ff3bb3cd1031680b57e1695c53f93 src/Config.c
+a36697bbcb6cf7930b349f04ff1f087b src/lib/Config.c
+e6cc1ea61d9b27b004b579c1061ff1a6 src/lib/Submarine_valac.stamp
+47d5ca6ccf17a0d7dea38aa39e359755 src/submarine_valac.stamp

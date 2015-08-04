@@ -1,0 +1,13 @@
+/usr/share/doc/submarine/README.html
+/usr/share/doc/submarine/submarine.man
+/usr/share/doc/submarine/CMakeLists.txt
+/usr/share/doc/submarine/Makefile.am
+/usr/lib/x86_64-linux-gnu/libSubmarine.so.1.0.0
+/usr/lib/x86_64-linux-gnu/libSubmarine.so.1
+/usr/lib/x86_64-linux-gnu/libSubmarine.so
+/usr/include/Submarine.h
+/usr/share/vala/vapi/Submarine.vapi
+/usr/share/vala/vapi/Submarine.deps
+/usr/share/gir-1.0/Submarine-1.0.gir
+/usr/lib/x86_64-linux-gnu/pkgconfig/Submarine.pc
+/usr/bin/submarine
