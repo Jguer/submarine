@@ -40,7 +40,6 @@ set(MODULES_TO_CHECK ${MODULES_TO_CHECK} libxml-2.0)
 
 pkg_check_modules(DEPS REQUIRED ${MODULES_TO_CHECK})
 
-add_subdirectory(doc)
 add_subdirectory(po)
 add_subdirectory(src/lib)
 add_subdirectory(src)
